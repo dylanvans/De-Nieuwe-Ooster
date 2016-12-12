@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>De Nieuwe Ooster</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="data-vis-panel panel-hidden">
+		<button class="open-panel-btn data-vis-label-btn">Bekijk ze hier</button>
+		<div class="container-panel-content">
+			<div class="js-hide">
+			<!-- 	<input type="checkbox" class="data-vis-filters filter-gender" name="filter-gender" id="filter-gender-man" value="M">
+				<input type="checkbox" class="data-vis-filters filter-gender" name="filter-gender" id="filter-gender-woman" value="V">
+				<input type="checkbox" class="data-vis-filters filter-age" name="filter-age" id="filter-age-25" value="0-25">
+				<input type="checkbox" class="data-vis-filters filter-age" name="filter-age" id="filter-age-40" value="26-40">
+				<input type="checkbox" class="data-vis-filters filter-age" name="filter-age" id="filter-age-60" value="41-60">
+				<input type="checkbox" class="data-vis-filters filter-age" name="filter-age" id="filter-age-99" value="61-99">
+				<input type="checkbox" class="data-vis-filters filter-location" name="filter-location" id="filter-location-amsterdam" value="amsterdam">
+				<input type="checkbox" class="data-vis-filters filter-location" name="filter-location" id="filter-location-utrecht" value="utrecht">
+				<input type="checkbox" class="data-vis-filters filter-location" name="filter-location" id="filter-location-rotterdam" value="rotterdam">
+				<input type="checkbox" class="data-vis-filters filter-location" name="filter-location" id="filter-location-eindhoven" value="eindhoven">
+				<input type="checkbox" class="data-vis-filters filter-location" name="filter-location" id="filter-location-groningen" value="groningen">
+				<input type="checkbox" class="data-vis-filters filter-location" name="filter-location" id="filter-location-zwolle" value="zwolle">
+				<input type="checkbox" class="data-vis-filters filter-category" name="filter-category" id="filter-category-civilian" value="civilian">
+				<input type="checkbox" class="data-vis-filters filter-category" name="filter-category" id="filter-category-military" value="military">
+				<input type="checkbox" class="data-vis-filters filter-category" name="filter-category" id="filter-category-resistance" value="resistance"> -->
+<!-- 				<input type="radio" class="data-vis-filters input-options filter-category" name="filter-category" id="option-category-civilian" value="civilian">
+				<input type="radio" class="data-vis-filters input-options filter-category" name="filter-category" id="option-category-military" value="military">
+				<input type="radio" class="data-vis-filters input-options filter-category" name="filter-category" id="option-category-resistance" value="resistance"> -->
+			</div>
+			<div class="filter-section">
+				<!-- <div class="fieldset">
+					<h3 class="fieldset-heading">Geslacht:</h3>
+					<label class="label-filter-section filter-gender-man" for="filter-gender-man">Man</label>
+					<label class="label-filter-section filter-gender-woman" for="filter-gender-woman">Vrouw</label>
+				</div>
+				<div class="fieldset">
+					<h3 class="fieldset-heading">Leeftijd:</h3>
+					<label class="label-filter-section filter-age-25" for="filter-age-25">0-25</label>
+					<label class="label-filter-section filter-age-40" for="filter-age-40">26-40</label>
+					<label class="label-filter-section filter-age-60" for="filter-age-60">41-60</label>
+					<label class="label-filter-section filter-age-99" for="filter-age-99">61-99</label>
+				</div>
+				<div class="fieldset">
+					<h3 class="fieldset-heading">Geboren in omgeving:</h3>
+					<label class="label-filter-section filter-location-amsterdam" for="filter-location-amsterdam">Amsterdam</label>
+					<label class="label-filter-section filter-location-utrecht" for="filter-location-utrecht">Utrecht</label>
+					<label class="label-filter-section filter-location-rotterdam" for="filter-location-rotterdam">Rotterdam</label>
+					<label class="label-filter-section filter-location-eindhoven" for="filter-location-eindhoven">Eindhoven</label>
+					<label class="label-filter-section filter-location-groningen" for="filter-location-groningen">Groningen</label>
+					<label class="label-filter-section filter-location-zwolle" for="filter-location-zwolle">Zwolle</label>
+				</div>
+				<div class="fieldset">
+					<h3 class="fieldset-heading">Categorie:</h3>
+					<label class="label-filter-section filter-category-civilian" for="filter-category-civilian">Burger</label>
+					<label class="label-filter-section filter-category-military" for="filter-category-military">Militair</label>
+					<label class="label-filter-section filter-category-resistance" for="filter-category-resistance">Verzetsstrijder</label>
+				</div> -->
+				<h3 class="fieldset-heading">Geslacht</h3>
+				<div class="fieldset">	
+					<label class="label-filter-section option-gender-man" for="option-gender-man">Man</label>
+					<label class="label-filter-section option-gender-woman" for="option-gender-woman">Vrouw</label>
+				</div>
+				<h3 class="fieldset-heading">Leeftijd</h3>
+				<div class="fieldset">
+					<label class="label-filter-section option-age-25" for="option-age-25">0-25</label>
+					<label class="label-filter-section option-age-40" for="option-age-40">26-40</label>
+					<label class="label-filter-section option-age-60" for="option-age-60">41-60</label>
+					<label class="label-filter-section option-age-99" for="option-age-99">61-99</label>
+				</div>
+				<h3 class="fieldset-heading">Geboren in Amsterdam</h3>
+				<div class="fieldset">
+					<label class="label-filter-section option-location-amsterdam" for="option-location-amsterdam">Ja</label>
+					<label class="label-filter-section option-location-eindhoven" for="option-location-eindhoven">Nee</label>
+				</div>
+				<h3 class="fieldset-heading">Categorie</h3>
+				<div class="fieldset">
+					<label class="label-filter-section option-category-civilian" for="option-category-civilian">Burger</label>
+					<label class="label-filter-section option-category-military" for="option-category-military">Militair</label>
+					<label class="label-filter-section option-category-resistance" for="option-category-resistance">Verzetsstrijder</label>
+				</div>
+			</div>
+			<div class="container-data-vis">
+
+			</div>
+		</div>
+	</div>
+	<div class="js-carousel carousel">
+	  	<div class="container-carousel">
+			<div class="container-navigation js-hide js-nav">
+				<div class="section-inner-nav">
+					<nav class="navigation-carousel">
+		  				<ul class="nav-list">
+		  					<li class="nav-link js-nav-link"><a href="#">Intro</a></li>
+				  			<li class="nav-link js-nav-link"><a href="#">Geslacht</a></li>
+				  			<li class="nav-link js-nav-link"><a href="#">Leeftijd</a></li>
+				  			<li class="nav-link js-nav-link"><a href="#">Locatie</a></li>
+				  			<!-- <li class="nav-link js-nav-link result-nav-link"><a href="#">Conclusie</a></li> -->
+				  		</ul>
+			  		</nav> 
+				</div>
+			</div>
+			<div class="carousel-viewport">
+			  	<div class="container-chapters">	
+			  		<section class="chapter">
+						<div class="container-intro">
+								<p class="intro-text">Wie waren de slachtoffers en wat is hun verhaal? Zij waren net als u, ontdek uw overeenkomsten met de slachtoffers.</p>
+								<button class="js-next-chapter intro-btn">Ontdek het zelf</button>
+								<p class="nav-link js-nav-link result-nav-link"><a href="#">Sla vragen over</a></p>
+						</div>
+					</section>
+					<section class="chapter">
+						<div class="container-question">
+							<div class="question">
+								<div class="container-question-heading">
+									<h2 class="question-heading">Wat is uw geslacht?</h2>
+								</div>
+								<input type="radio" class="input-options" name="question-gender" id="option-gender-man" value="M">
+								<input type="radio" class="input-options" name="question-gender" id="option-gender-woman" value="V">
+								<div class="container-gender-options container-options">
+									<label class="label-option option-gender " for="option-gender-man">
+										<div class="container-option-image js-next-chapter">
+											<div class="container-option-hover option-man">
+												<div class="option-hover">
+													<h3 class="option-heading">Man</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="label-option option-gender " for="option-gender-woman">
+										<div class="container-option-image js-next-chapter">
+											<div class="container-option-hover option-woman">
+												<div class="option-hover">
+													<h3 class="option-heading">Vrouw</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="chapter">	
+						<div class="container-question">
+							<div class="question">
+								<div class="container-question-heading">
+									<h2 class="question-heading">Wat is uw leeftijd?</h2>
+								</div>
+								<input type="radio" class="input-options" name="question-age" id="option-age-25" value="0-25">
+								<input type="radio" class="input-options" name="question-age" id="option-age-40" value="26-40">
+								<input type="radio" class="input-options" name="question-age" id="option-age-60" value="41-60">
+								<input type="radio" class="input-options" name="question-age" id="option-age-99" value="61-99">
+								<div class="container-options">
+									<label class="label-option option-age " for="option-age-25">
+										<div class="container-option-image js-next-chapter ">
+											<div class="container-option-circle option-breuker">
+												<div class="option-circle">
+													<h3 class="option-heading">0-25</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="label-option option-age " for="option-age-40">
+										<div class="container-option-image js-next-chapter">
+											<div class="container-option-circle option-richter">
+												<div class="option-circle">
+													<h3 class="option-heading">26-40</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="label-option option-age " for="option-age-60">
+										<div class="container-option-image js-next-chapter">
+											<div class="container-option-circle option-goseling">
+												<div class="option-circle">
+													<h3 class="option-heading">41-60</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="label-option option-age " for="option-age-99">
+										<div class="container-option-image js-next-chapter">
+											<div class="container-option-circle option-rutgers">
+												<div class="option-circle">
+													<h3 class="option-heading">61-99</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="chapter">			
+						<div class="container-question">
+							<div class="question">
+								<div class="container-question-heading">
+									<h2 class="question-heading">Woont u in Amsterdam?</h2>
+								</div>
+								<input type="radio" class="input-options" name="question-location" id="option-location-amsterdam" value="true">
+								<input type="radio" class="input-options" name="question-location" id="option-location-eindhoven" value="false">
+								<div class="container-options">
+									<label class="label-option option-location" for="option-location-amsterdam">
+										<div class="container-option-image js-next-chapter ">
+											<div class="container-option-circle option-amsterdam">
+												<div class="option-circle">
+													<h3 class="option-heading">Ja</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="label-option option-location" for="option-location-eindhoven">
+										<div class="container-option-image js-next-chapter">
+											<div class="container-option-circle option-eindhoven">
+												<div class="option-circle">
+													<h3 class="option-heading">Nee</h3>
+												</div>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</section>	
+					<section class="chapter end-chapter">		
+						<div class="container-intro">
+							<div class="container-question-heading">
+								<h3 class="end-heading">Het meest overeenkomend met uw profiel</h3>
+							</div>
+							<div class="container-result">
+								<div class="container-result-content">
+									<div class="result-flex">
+										<div class="container-result-image">
+											<div class="result-image person-one-image"></div>
+										</div>
+										<div class="container-result-info">
+											<h3 class="person-one-name result-name"></h3>
+											<!-- <p class="person-one-age-category result-age-category"></p> -->
+											<p class="person-one-lifespan result-age-category"></p>
+											<p class="person-one-birth-place result-info-text result-birth-place"></p>
+											<p class="person-one-death-place result-info-text result-death-place"></p>
+										</div>
+									</div>
+									<div class="container-result-story">
+										<p class="result-story person-one-story"></p>
+									</div>
+								</div>
+								
+							</div>
+							<div class="container-trigger-text">
+								<p class="trigger-text similar-people-number">Er zijn nog <span>6</span> andere <br> slachtoffers zoals u</p>
+							</div>
+						</div>	
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tooltip">
+		<div class="tooltip-main-content">
+			<div class="container-tooltip-image">
+				<div class="tooltip-image">
+				</div>
+			</div>
+			<div class="tooltip-main-info">
+				<h3 class="tooltip-name"></h3>
+				<p class="tooltip-birth-place"></p>
+				<p class="tooltip-birth-date"></p>
+				<p class="tooltip-death-date"></p>	
+			</div>	
+		</div>
+		<div class="tooltip-story"></div>
+	</div>
+	<div class="js-hide">
+		<input type="radio" class="data-vis-filters input-options filter-category" name="filter-category" id="option-category-civilian" value="Burger">
+		<input type="radio" class="data-vis-filters input-options filter-category" name="filter-category" id="option-category-military" value="Militair">
+		<input type="radio" class="data-vis-filters input-options filter-category" name="filter-category" id="option-category-resistance" value="verzetsstrijder">
+	</div>
+	
+	<script src="d3.min.js"></script>
+	<script src="d3-grid.js"></script>
+	<script src="jquery-3.1.0.min.js"></script>
+	<script src="script.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
